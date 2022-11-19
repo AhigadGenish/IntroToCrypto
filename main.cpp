@@ -6,6 +6,7 @@
 #include <ctime>
 using namespace std;
 //Ahigad genish
+//Ahigad.genish@gmail.com
 char intToChar(int s) {
 	switch (s) {
 		case 1: 

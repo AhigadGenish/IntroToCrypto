@@ -50,7 +50,7 @@ pair<string,string> encOtp(string key, string path) {
 	ofstream file;
 	string p;
 	file.open(path);
-	cout << "Insert your massege with length of " << len << endl;
+	cout << "Insert your message with length of " << len << endl;
 	cin >> p;
 	if (file.is_open())
 	{
@@ -93,7 +93,7 @@ string encVigenere(string key, string path) {
 	ofstream file;
 	string p;
 	file.open(path);
-	cout << "Insert your massege" << endl;
+	cout << "Insert your message" << endl;
 	cin >> p;
 	
 	for (int i = 0;i < 26;i++) {
@@ -157,10 +157,10 @@ string decVigenere(string key, string &path) {
 // examples :
 int main() {
 	 // vigenere :
-	string path = "C:\\Users\\ahiga\\Documents\\ex3_vigenere_plaintext.txt";
+	string path = "C:\\Users\\ahiga\\Documents\\ex1_vigenere_ciphertext.txt";
 	string key = "crypto";
-	string enrcypred = encVigenere(key,path);
-	cout << "The encrypted massege was : " << decVigenere("crypto", path) << endl;
+	//string enrcypred = encVigenere(key,path);
+	cout << "The encrypted message was : " << decVigenere(key, path) << endl;
 
 	// One Time Pad:
 	int len = 0;
@@ -170,6 +170,6 @@ int main() {
 	string path2 = "C:\\Users\\ahiga\\Documents\\ex_otp_ciohertext.txt";
 	pair<string,string>  enc = encOtp(key2, path2);
 	string dec = decOtp(enc.first, enc.second);
-	cout << "your encrypted massage was: " << dec << endl;
+	cout << "your encrypted message was: " << dec << endl;
 	return 0;
 }
